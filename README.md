@@ -6,7 +6,8 @@
 | ------- | ----------- |
 | 1. Project Description | Quick introduction |
 | 2. Functions | Quick overlook |
-| 3. Results | From web |
+| 3. How to Use | 3 steps |
+| 4. Results | From web |
 
 ---
 ### 1. Project Description
@@ -38,7 +39,13 @@ or
 - Jaccard
 
 ---
-### 3. Results
+### 3. How to use
+- Step 1: Run the Metrics Functions cells
+- Step 2: Run the Print Params cells
+- Step 3: Run on Scraped Data and compare to Test Data
+
+---
+### 4. Results
 The results of the Jupyter Notebook are not correctly displayed from Github web.
 
 You should clone the repository and run the Notebook.
