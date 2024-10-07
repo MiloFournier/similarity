@@ -11,6 +11,7 @@
 ---
 ### 1. Project Description
 Multiple similarity functions have been implemented to compare article titles between them and article texts between them.
+
 A simple web scraper has been used to demonstrate how the similarity functions are used. It should be replaced by a more powerful one.
 
 ---
@@ -39,4 +40,5 @@ or
 ---
 ### 3. Results
 The results of the Jupyter Notebook are not correctly displayed from Github web.
+
 You should clone the repository and run the Notebook.
