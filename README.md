@@ -17,26 +17,43 @@ A simple web scraper has been used to demonstrate how the similarity functions a
 
 ---
 ### 2. Functions
-- N-gram (optimized to learn the best n for both titles and texts)
+- N-gram
+
+It is a word-based similarity metric.
+```py
+def ngrams(input, n):
+
+    input = input.lower().split(' ')
+
+    output = []
+
+    for i in range(len(input)-n+1):
+        output.append(tuple(input[i:i+n]))
+
+    return output
+
+def ngram_sim(text1, text2, n):
+
+    ng1 = set(ngrams(text1, n))
+    ng2 = set(ngrams(text2, n))
+    
+    common_ngrams = ng1.intersection(ng2)
+
+    return (2*len(common_ngrams))/(len(ng1)+len(ng2))
+```
 - Edit distance
-- Edit score
+- Edit score 
+
+It takes into account the length of the text and normalizes it.
 ```py
 def edit_score(text1, text2):
 
     return 1 - (editdistance.eval(text1, text2) / max(len(text1), len(text2)))
 ```
 - Combined Syntaxic Similarity (CSS)
-
-Either
 ```py
 (ngram_similarity + edit_sim) / 2
 ```
-or
-```py 
-(ngram_similarity + edit_sim + cos_sim) / 3
-```
-- Cosine
-- Jaccard
 
 ---
 ### 3. How to use
